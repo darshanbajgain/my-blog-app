@@ -17,7 +17,7 @@ const BlogContent = () => {
                     <div className="max-w-full md:max-w-lg"> 
                         <img className='w-full h-auto mb-4' src={blog.coverImg} alt={blog.title} />
                     </div>
-                    <div className="pt-4 text-white">
+                    <div className="pt-4 px-8 text-white">
                         <p>{blog.content}</p>
                     </div>
                 </div>

@@ -1,9 +1,17 @@
-import React from 'react';
 import { useParams } from 'react-router-dom';
 
-const BlogContent = () => {
+const BlogContent = ({ blogsData }) => {
+    
+    const { id } = useParams();
 
-    const { id } = useParams()
+    let blog ={}
+    if (blog){
+        let arr = blogsData.data.filter(blog => blog.id == id)
+        blog = arr[0];
+    }
+    else {
+        blog={};
+    }
 
     { /*const blog = {
         "id": 1,
@@ -16,8 +24,8 @@ const BlogContent = () => {
         'authorProfileImg': 'https://media.licdn.com/dms/image/D5603AQHiTbxjVI1AEQ/profile-displayphoto-shrink_800_800/0/1682674343890?e=1701907200&v=beta&t=0ASP4jhQWmTvpo5NIi96n_Mq_OQHR83mG9_MqbbKNrE' 
     };
 */}
-
-    const blogitems = [
+    {/*
+     const blogitems = [
         {
             "id": 1,
             'title': 'Blog 1',
@@ -65,8 +73,10 @@ const BlogContent = () => {
 
     ]
 
-    let blog = blogitems.filter(blog=> blog.id == id)
-    blog = blog[0];
+
+*/}
+
+
 
 
 
@@ -76,19 +86,21 @@ const BlogContent = () => {
                 <div className="flex flex-col items-center">
                     <h1 className="md:text-4xl text-2xl text-white font-bold mb-4 p-2">{blog.title}</h1>
                     <div className="max-w-full md:max-w-2xl">
-                        <img className='w-full h-auto mb-4' src={blog.coverImg} alt={blog.title} />
+                        <img className='w-full h-auto mb-4' src={`http://localhost:1337${blog.attributes.coverImg.data.attributes.url}`} alt={blog.attributes.blogTitle} />
                     </div>
                     <div className="pt-4 lg:px-32 text-white">
-                        <p className='my-2'>{blog.content}</p>
+                        <p className='py-5'>
+                        {blog.attributes.blogContent}
+                        </p> 
                         <div className="flex flex-col items-center max-w-[400px] mx-auto py-6 bg-slate-800 rounded-2xl mt-8">
                             <img
                                 className="w-16 h-16 rounded-full mb-2"
-                                src={blog.authorProfileImg}
-                                alt={blog.author}
+                                src={`http://localhost:1337${blog.attributes.authorProfileImg.data.attributes.url}`}
+                                alt={blog.attributes.author}
                             />
                             <p className="text-gray-400 py-2">Written by:</p>
-                            <div className="text-gray-400">{blog.author}</div>
-                            <div className="text-gray-400 mt-2">{blog.date}</div>
+                            <div className="text-gray-400">{blog.attributes.author}</div>
+                            <div className="text-gray-400 mt-2">{blog.attributes.date}</div>
                         </div>
                     </div>
                 </div>

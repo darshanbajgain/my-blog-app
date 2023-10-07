@@ -2,11 +2,11 @@ import React from 'react';
 import { Navbar, Footer, BlogContent } from '../components';
 
 
-const BlogContentPage = () => {
+const BlogContentPage = ({blogsData}) => {
     return (
         <div>
             <Navbar />
-            <BlogContent/> 
+            <BlogContent blogsData={blogsData}/> 
             <Footer />
         </div>
     )

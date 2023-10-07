@@ -4,11 +4,13 @@ import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 
 
-const Homepage = () => {
+const Homepage = ({blogsData}) => {
+    
+
     return (
         <div>
             <Navbar /> 
-            <Blogs />
+            <Blogs blogsData={blogsData} />
             <Footer />
         </div>
     )

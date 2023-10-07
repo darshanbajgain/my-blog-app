@@ -1,4 +1,5 @@
 import { useParams } from 'react-router-dom';
+import MarkdownIt from 'markdown-it'; 
 
 const BlogContent = ({ blogsData }) => {
     
@@ -12,6 +13,9 @@ const BlogContent = ({ blogsData }) => {
     else {
         blog={};
     }
+
+    // Create a new instance of markdown-it
+    const md = new MarkdownIt();
 
     { /*const blog = {
         "id": 1,
@@ -88,10 +92,9 @@ const BlogContent = ({ blogsData }) => {
                     <div className="max-w-full md:max-w-2xl">
                         <img className='w-full h-auto mb-4' src={`http://localhost:1337${blog.attributes.coverImg.data.attributes.url}`} alt={blog.attributes.blogTitle} />
                     </div>
-                    <div className="pt-4 lg:px-32 text-white">
-                        <p className='py-5'>
-                        {blog.attributes.blogContent}
-                        </p> 
+                    <div className="pt-4 lg:px-12 text-white">
+                         <div dangerouslySetInnerHTML={{ __html: md.render(blog.attributes.blogContent) }} />
+                     
                         <div className="flex flex-col items-center max-w-[400px] mx-auto py-6 bg-slate-800 rounded-2xl mt-8">
                             <img
                                 className="w-16 h-16 rounded-full mb-2"

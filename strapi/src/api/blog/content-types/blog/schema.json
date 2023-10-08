@@ -30,7 +30,7 @@
       "type": "string"
     },
     "blogContent": {
-      "type": "markdown"
+      "type": "richtext"
     },
     "author": {
       "type": "string"

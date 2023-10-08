@@ -1,5 +1,5 @@
 import { useParams } from 'react-router-dom';
-import MarkdownIt from 'markdown-it'; 
+import ReactMarkdown from 'react-markdown';
 
 const BlogContent = ({ blogsData }) => {
     
@@ -14,8 +14,7 @@ const BlogContent = ({ blogsData }) => {
         blog={};
     }
 
-    // Create a new instance of markdown-it
-    const md = new MarkdownIt();
+
 
     { /*const blog = {
         "id": 1,
@@ -93,7 +92,9 @@ const BlogContent = ({ blogsData }) => {
                         <img className='w-full h-auto mb-4' src={`http://localhost:1337${blog.attributes.coverImg.data.attributes.url}`} alt={blog.attributes.blogTitle} />
                     </div>
                     <div className="pt-4 lg:px-12 text-white">
-                         <div dangerouslySetInnerHTML={{ __html: md.render(blog.attributes.blogContent) }} />
+                        <ReactMarkdown>
+                        {blog.attributes.blogContent}
+                        </ReactMarkdown>
                      
                         <div className="flex flex-col items-center max-w-[400px] mx-auto py-6 bg-slate-800 rounded-2xl mt-8">
                             <img

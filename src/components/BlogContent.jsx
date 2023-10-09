@@ -16,13 +16,7 @@ const BlogContent = ({ blogsData }) => {
         blog = {};
     }
 
-      // Define custom styles for ReactMarkdown components
-      const customComponents = {
-        p: ({ node, ...props }) => <p style={{ color: 'white' }} {...props} />,
-        h1: ({ node, ...props }) => <h1 style={{ color: 'white' }} {...props} />,
-        // Add more elements as needed
-    };
-
+   
     return (
         <div className="w-full py-16 px-8 relative bg-gray-800">
             <div className='max-w-[1340px] mx-auto pt-24'>

@@ -15,6 +15,19 @@ export default {
       fontFamily: {
         poppins: ["Poppins", "sans-serif"],
       },
+      typography: {
+        // Customize the prose class styles
+        prose: {
+          color: '#ffff', // Set the text color to white
+        },
+        // You can also customize specific elements within prose
+        'h1': {
+          color: '#FFA500', // Set the color for h1 headings
+        },
+        'p': {
+          color: '#CCCCCC', // Set the color for paragraphs
+        },
+      },
     },
     screens: {
       xs: "480px",
@@ -25,5 +38,7 @@ export default {
       xl: "1700px",
     },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/typography'),
+  ],
 }

@@ -18,10 +18,10 @@ const BlogContent = ({ blogsData }) => {
 
    
     return (
-        <div className="w-full py-16 px-8 relative bg-gray-800">
-            <div className='max-w-[1340px] mx-auto pt-24'>
+        <div className="w-full py-16 px-8 relative bg-gray-900">
+            <div className='max-w-[1340px] mx-auto px-1 pt-24'>
                 <div className="flex flex-col items-center">
-                    <h1 className="md:text-4xl text-2xl text-white font-bold mb-4 pt-4">{blog.attributes.blogTitle}</h1>
+                    <h1 className="md:text-3xl text-2xl text-white font-bold mb-4 pt-4">{blog.attributes.blogTitle}</h1>
                     <div className="max-w-full md:max-w-2xl pt-8">
                         <img className='w-full h-auto mb-4' src={`http://localhost:1337${blog.attributes.coverImg.data.attributes.url}`} alt={blog.attributes.blogTitle} />
                     </div>

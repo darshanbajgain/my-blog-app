@@ -27,7 +27,9 @@ const BlogContent = ({ blogsData }) => {
                     </div>
                     <div className="pt-10">
 
-                        <ReactMarkdown className="prose max-w-full lg:px-24 prose-headings:text-white prose-p:text-white">
+                        <ReactMarkdown className="prose md:p-1 lg:p-2 prose-pre:mx-auto prose-pre:max-w-[250px] ss:prose-pre:max-w-full prose-headings:text-white 
+                         prose-p:text-white prose-ul: text-white prose-img:max-w-[330px] prose-img:mx-auto sm:prose-img:max-w-[500px]
+                         prose-strong:text-white sm:sm:text-base md:text-lg lg:text-xl">
                         
                             {blog.attributes.blogContent}
                            
@@ -40,7 +42,7 @@ const BlogContent = ({ blogsData }) => {
                                 src={`http://localhost:1337${blog.attributes.authorProfileImg.data.attributes.url}`}
                                 alt={blog.attributes.author}
                             />
-                            <p className="text-gray-300 py-2">Written by:</p>
+                            <p className="text-gray-300 py-2 overflow-hidden">Written by:</p>
                             <div className="text-gray-300">{blog.attributes.author}</div>
                             <div className="text-gray-300 mt-2">{blog.attributes.date}</div>
                         </div>

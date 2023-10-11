@@ -22,7 +22,7 @@ const Footer = () => {
             <h2 className='text-lg font-semibold text-white mb-4'>Contact Me</h2>
             <div className='text-sm mb-2'>
               <HiOutlineMail className='text-gray-300 mr-2 inline' />
-              <span className='align-middle'>example@example.com</span>
+              {/*<span className='align-middle'>example@example.com</span>*/}
             </div>
             <div className='text-sm'>
               <HiGlobe className='text-gray-300 mr-2 inline' />

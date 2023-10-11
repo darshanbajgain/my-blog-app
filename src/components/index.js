@@ -1,7 +1,7 @@
 import Navbar from "./Navbar";
 import Blogs from "./Blogs";
 import Footer from "./Footer";
-import BlogContent from "./BlogContent.jsx";
+import BlogContent from "./BlogContent";
 
 export {
     Navbar, 

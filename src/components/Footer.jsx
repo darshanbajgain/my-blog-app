@@ -1,6 +1,8 @@
 import React from 'react';
 import { FaTwitter, FaLinkedin, FaGithub } from 'react-icons/fa';
 import { HiOutlineMail, HiGlobe } from 'react-icons/hi';
+import { Link } from 'react-router-dom';
+
 
 const Footer = () => {
   return (
@@ -10,33 +12,35 @@ const Footer = () => {
           {/* Footer Column 1 */}
           <div>
             <h2 className='text-lg font-semibold text-white mb-4'>Quick Links</h2>
-            <ul className='text-sm'>
-              <li className='mb-2'><a href='#' className='hover:text-gray-100'>Home</a></li>
-              <li className='mb-2'><a href='#' className='hover:text-gray-100'>Post</a></li>
-              <li className='mb-2'><a href='#' className='hover:text-gray-100'>About</a></li>
+            <ul className='text-sm flex flex-col items-center'>
+              <Link to='/'      className="p-1 hover:text-white">Home</Link>
+              <Link to='/posts' className="p-1 hover:text-white">Post</Link>
+              <Link to='/about' className="p-1 hover:text-white">About</Link>
             </ul>
           </div>
 
           {/* Footer Column 2 */}
           <div>
             <h2 className='text-lg font-semibold text-white mb-4'>Contact Me</h2>
+            {/*
             <div className='text-sm mb-2'>
               <HiOutlineMail className='text-gray-300 mr-2 inline' />
-              {/*<span className='align-middle'>example@example.com</span>*/}
+              <span className='align-middle'>example@example.com</span>
             </div>
-            <div className='text-sm'>
-              <HiGlobe className='text-gray-300 mr-2 inline' />
-              <a href='#' className='hover:text-gray-300 align-middle'>www.example.com</a>
+            */}
+            <div className='text-sm hover:text-white'>
+              <HiGlobe size={20} className='text-gray-300 mr-2 inline' />
+              <a href='#' className='align-middle '>www.example.com</a>
             </div>
           </div>
 
           {/* Footer Column 3 */}
           <div>
             <h2 className='text-lg font-semibold text-white mb-4'>Follow Me</h2>
-            <div className='flex justify-center space-x-4'>
-              <a href='#' className='text-gray-300 hover:text-white' title='Twitter'><FaTwitter /></a>
-              <a href='#' className='text-gray-300 hover:text-white' title='LinkedIn'><FaLinkedin /></a>
-              <a href='#' className='text-gray-300 hover:text-white' title='GitHub'><FaGithub /></a>
+            <div className='flex justify-center items-center space-x-4'>
+              <a href='https://twitter.com/thearshanbajgai' className='text-gray-300 hover:text-white' title='Twitter'><FaTwitter size={22} /></a>
+              <a href='https://www.linkedin.com/in/darshanbajgain/' className='text-gray-300 hover:text-white' title='LinkedIn'><FaLinkedin size={22} /></a>
+              <a href='https://github.com/darshanbajgai' className='text-gray-300 hover:text-white' title='GitHub'><FaGithub size={22} /></a>
             </div>
           </div>
         </div>

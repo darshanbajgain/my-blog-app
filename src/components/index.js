@@ -2,10 +2,14 @@ import Navbar from "./Navbar";
 import Blogs from "./Blogs";
 import Footer from "./Footer";
 import BlogContent from "./BlogContent";
+import AboutContent from "./AboutContent";
+import PostsContents from "./PostsContents";
 
 export {
     Navbar, 
     Blogs,
     Footer,
-    BlogContent
+    BlogContent,
+    AboutContent,
+    PostsContents
 };

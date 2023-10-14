@@ -4,6 +4,7 @@ import Footer from "./Footer";
 import BlogContent from "./BlogContent";
 import AboutContent from "./AboutContent";
 import PostsContents from "./PostsContents";
+import FeaturedBlog from "./FeaturedBlogs";
 
 export {
     Navbar, 
@@ -11,5 +12,6 @@ export {
     Footer,
     BlogContent,
     AboutContent,
-    PostsContents
+    PostsContents,
+    FeaturedBlog
 };

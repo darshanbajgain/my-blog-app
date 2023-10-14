@@ -1,10 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import FeaturedBlog from './FeaturedBlog';
+import FeaturedBlogs from './FeaturedBlogs'
 
-const Blogs = ({blogsData}) => {
+const Blogs = ({ blogsData }) => {
 
-{/*
+  {/*
   const blogitems = [
     {
       "id": 1,
@@ -21,29 +21,45 @@ const Blogs = ({blogsData}) => {
   ]
 
 */}
+  // Define the IDs of the featured blogs from Strapi
+  const featuredBlogIds = [1,2,4]; // Replace with your featured blog IDs
+
+  // Filter the featured blogs based on their IDs
+  const featuredBlogs = blogsData.data.filter((blog) => featuredBlogIds.includes(blog.id));
 
 
   return (
 
     <div className='w-ful dark:bg-gray-900 text-white p-6'>
       <div className='max-w-[1340px] mx-auto'>
-        <div className='grid lg:mt-16 ss:grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-10 py-24 lg:px-4 my-10'>
+
+        <div className='w-full lg:mt-16 pt-16 text-center mb-6'>
+          <h2 className='text-3xl py-2 font-bold text-white mb-4'>Featured Content</h2>
+          <div className='grid ss:grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4'>
+            {featuredBlogs.map((blog) => (
+              <FeaturedBlogs key={blog.id} blog={blog} />
+            ))}
+          </div>
+        </div>
+        <div className='grid  ss:grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-10 py-24 lg:px-4 my-2'>
+
 
           {
-
-            blogsData.data.map((blog) =>
-              <Link key={blog.id} to={`/blog/${blog.id}`}>
-                <div className='dark:bg-slate-800 overflow-hidden rounded-xl shadow-inner hover:bg-slate-700 drop-shadow-2xl'>
-                  <img className='h-62 w-[100%] object-cover rounded-2xl m-auto p-2 ' src={`http://localhost:1337${blog.attributes.coverImg.data.attributes.url}`} />
-                  <div className='p-4'>
-                    <h3 className='font-bold text-xl my-l'>{blog.attributes.blogTitle}</h3>
-                    <p className='text-gray-300 text-base py-2'>
-                      {blog.attributes.blogDesc}
-                    </p>
+            blogsData.data
+              .filter((blog) => !featuredBlogIds.includes(blog.id))
+              .map((blog) =>
+                <Link key={blog.id} to={`/blog/${blog.id}`}>
+                  <div className='dark:bg-slate-800 overflow-hidden rounded-xl shadow-inner hover:bg-slate-700 drop-shadow-2xl'>
+                    <img className='h-62 w-[100%] object-cover rounded-2xl m-auto p-2 ' src={`http://localhost:1337${blog.attributes.coverImg.data.attributes.url}`} />
+                    <div className='p-4'>
+                      <h3 className='font-bold text-xl my-l'>{blog.attributes.blogTitle}</h3>
+                      <p className='text-gray-300 text-base py-2'>
+                        {blog.attributes.blogDesc}
+                      </p>
+                    </div>
                   </div>
-                </div>
-              </Link>
-            )
+                </Link>
+              )
           }
 
           {/*
@@ -61,22 +77,6 @@ const Blogs = ({blogsData}) => {
             </Link>
             )
         */}
-
-
-          {
-            /*
-              <div className='dark:bg-slate-900 overflow-hidden rounded-xl drop-shadow-md'>
-                  <img className='h-62 w-[100%] object-cover rounded-2xl m-auto p-2 ' src={"https://i.ytimg.com/vi/kFARYsqwlJI/maxresdefault.jpg"} />
-                  <div className='p-4'>
-                    <h3 className='font-bold text-2xl my-l'> Blog 1</h3>
-                    <p className='text-gray-400 text-lg py-2'>
-                      Lorepm ipsum font a ram goes to water palnt this is jigad text.
-                    </p>
-                  </div>
-                </div>
-            */
-          }
-
         </div>
       </div>
     </div>

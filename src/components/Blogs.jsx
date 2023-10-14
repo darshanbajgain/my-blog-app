@@ -21,6 +21,7 @@ const Blogs = ({ blogsData }) => {
   ]
 
 */}
+
   // Define the IDs of the featured blogs from Strapi
   const featuredBlogIds = [1, 2]; // Replace with your featured blog IDs
 
@@ -46,7 +47,7 @@ const Blogs = ({ blogsData }) => {
           </div>
         </div>
 
-        <div className='w-full text-center my-6'>
+        <div className='w-full text-center my-6 py-4'>
           <h2 className='text-2xl lg:text-3xl font-bold text-white py-2 mb-4'>Latest Posts</h2>
           <div className='grid ss:grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4'>
             {latestPosts.map((blog) => (
@@ -65,6 +66,13 @@ const Blogs = ({ blogsData }) => {
             ))}
           </div>
         </div>
+        <div className='w-full text-center mb-6'>
+            <Link to='/posts'>
+              <button className='bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-full'>
+                Load More
+              </button>
+            </Link>
+          </div>
 
         
       </div>

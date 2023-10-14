@@ -6,8 +6,9 @@ const PostsContents = ({blogsData}) => {
   return (
 
     <div className='w-ful dark:bg-gray-900 text-white p-6'>
-      <div className='lg:max-w-[1240px] md:max-w-[1100px] sm:max-w-[780px] ss:max-w-[550px] mx-auto'>
-        <div className='grid lg:mt-16 ss:grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10 py-24 lg:px-4 my-10'>
+      <div className='lg:max-w-[1240px] md:max-w-[1100px] sm:max-w-[780px] ss:max-w-[550px] mx-auto py-24 lg:px-4 my-6'>
+      <h1 className='text-2xl lg:text-3xl text-center font-bold py-4 lg:py-6 mb-2'>All Blogs</h1>
+        <div className='grid  ss:grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10 '>
 
           {
             blogsData.data.map((blog) =>

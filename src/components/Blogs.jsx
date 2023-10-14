@@ -47,8 +47,8 @@ const Blogs = ({ blogsData }) => {
           </div>
         </div>
 
-        <div className='w-full text-center my-6 py-4'>
-          <h2 className='text-2xl lg:text-3xl font-bold text-white py-2 mb-4'>Latest Posts</h2>
+        <div className='w-full text-center my-6 py-8'>
+          <h2 className='text-2xl lg:text-3xl font-bold text-white py-4 mb-4'>Latest Posts</h2>
           <div className='grid ss:grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4'>
             {latestPosts.map((blog) => (
               <Link key={blog.id} to={`/blog/${blog.id}`}>
@@ -66,9 +66,9 @@ const Blogs = ({ blogsData }) => {
             ))}
           </div>
         </div>
-        <div className='w-full text-center mb-6'>
+        <div className='w-full text-center mb-8 py-2'>
             <Link to='/posts'>
-              <button className='bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-full'>
+              <button className='bg-blue-900 hover:bg-blue-800 text-white font-bold py-4 px-6 rounded-full text-sm uppercase'>
                 Load More
               </button>
             </Link>

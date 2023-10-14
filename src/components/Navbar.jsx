@@ -21,7 +21,7 @@ const Navbar = () => {
                 </div>
                 <div className="flex items-center">
 
-                    <ul className="hidden md:flex uppercase text-white font-bold tracking-wide	 ">
+                    <ul className="hidden md:flex uppercase text-white font-bold tracking-widest">
                         <Link to='/' className="p-6 hover:text-gray-400">Home</Link>
                         <Link to='/posts' className="p-6 hover:text-gray-400">Post</Link>
                         <Link to='/about' className="p-6 hover:text-gray-400">About</Link>

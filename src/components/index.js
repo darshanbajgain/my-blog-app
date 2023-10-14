@@ -5,6 +5,7 @@ import BlogContent from "./BlogContent";
 import AboutContent from "./AboutContent";
 import PostsContents from "./PostsContents";
 import FeaturedBlogs from "./FeaturedBlogs";
+import LatestPosts from "./LatestPosts";
 
 export {
     Navbar, 
@@ -13,5 +14,6 @@ export {
     BlogContent,
     AboutContent,
     PostsContents,
-    FeaturedBlogs
+    FeaturedBlogs,
+    LatestPosts
 };

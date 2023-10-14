@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import FeaturedBlogs from './FeaturedBlogs'
+import FeaturedBlogs from './FeaturedBlogs';
+import LatestPosts from './LatestPosts';
 
 const Blogs = ({ blogsData }) => {
 
@@ -28,9 +29,9 @@ const Blogs = ({ blogsData }) => {
   // Filter the featured blogs based on their IDs
   const featuredBlogs = blogsData.data.filter((blog) => featuredBlogIds.includes(blog.id));
 
-    // Filter the latest posts (1-2 most recent posts)
-    const latestPosts = blogsData.data.filter((blog) => !featuredBlogIds.includes(blog.id))
-    .slice(0,4); // Adjust the number of latest posts as needed
+  // Filter the latest posts (1-2 most recent posts)
+  const latestPosts = blogsData.data.filter((blog) => !featuredBlogIds.includes(blog.id))
+  .slice(0, 4); // Adjust the number of latest posts as needed
 
 
   return (
@@ -51,37 +52,26 @@ const Blogs = ({ blogsData }) => {
           <h2 className='text-2xl lg:text-3xl font-bold text-white py-4 mb-4'>Latest Posts</h2>
           <div className='grid ss:grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4'>
             {latestPosts.map((blog) => (
-              <Link key={blog.id} to={`/blog/${blog.id}`}>
-                <div className='dark:bg-slate-800 overflow-hidden rounded-xl shadow-inner hover:bg-slate-700 drop-shadow-2xl'>
-                  <img
-                    className='h-62 w-[100%] object-cover rounded-2xl m-auto p-2'
-                    src={`http://localhost:1337${blog.attributes.coverImg.data.attributes.url}`}
-                  />
-                  <div className='p-4'>
-                    <h3 className='font-bold text-xl my-l'>{blog.attributes.blogTitle}</h3>
-                    <p className='text-gray-300 text-base py-2'>{blog.attributes.blogDesc}</p>
-                  </div>
-                </div>
-              </Link>
+              <LatestPosts key={blog.id} blog={blog}/>
             ))}
           </div>
         </div>
         <div className='w-full text-center mb-8 py-2'>
-            <Link to='/posts'>
-              <button className='bg-blue-900 hover:bg-blue-800 text-white font-bold py-4 px-6 rounded-full text-sm uppercase'>
-                Load More
-              </button>
-            </Link>
-          </div>
+          <Link to='/posts'>
+            <button className='bg-blue-900 hover:bg-blue-800 text-white font-bold py-4 px-6 rounded-full text-sm uppercase'>
+              Load More
+            </button>
+          </Link>
+        </div>
 
-        
+
       </div>
     </div>
   )
 };
 
 export default Blogs;
-  {/*
+{/*
             blogitems.map((blog) =>
             <Link key={blog.id} to={`/blog/${blog.id}`}>
               <div  className='dark:bg-slate-800 overflow-hidden rounded-xl shadow-inner hover:bg-slate-700 drop-shadow-2xl'>

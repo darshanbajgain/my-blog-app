@@ -20,7 +20,7 @@ const AboutContent = () => {
                 <br/>I am also learning backend technologies with Java and have knownlegde of Database like SQL, MongoDB.</p>
             </div>
             <div className="flex flex-row items-center text-center text-slate-100">
-            <h2 className="font-bold uppercase mx-auto py-4">Find me on below sites to know more..</h2>
+            <h2 className="font-bold uppercase mx-auto text-sm md:text-xl lg:text-xl py-4">Find me on below sites to know more..</h2>
 
 
             </div>

@@ -22,10 +22,14 @@ const Blogs = ({ blogsData }) => {
 
 */}
   // Define the IDs of the featured blogs from Strapi
-  const featuredBlogIds = [1,2,4]; // Replace with your featured blog IDs
+  const featuredBlogIds = [1, 2]; // Replace with your featured blog IDs
 
   // Filter the featured blogs based on their IDs
   const featuredBlogs = blogsData.data.filter((blog) => featuredBlogIds.includes(blog.id));
+
+    // Filter the latest posts (1-2 most recent posts)
+    const latestPosts = blogsData.data.filter((blog) => !featuredBlogIds.includes(blog.id))
+    .slice(0,4); // Adjust the number of latest posts as needed
 
 
   return (
@@ -33,15 +37,58 @@ const Blogs = ({ blogsData }) => {
     <div className='w-ful dark:bg-gray-900 text-white p-6'>
       <div className='max-w-[1340px] mx-auto'>
 
-        <div className='w-full lg:mt-16 pt-16 text-center mb-6'>
-          <h2 className='text-3xl py-2 font-bold text-white mb-4'>Featured Content</h2>
-          <div className='grid ss:grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4'>
+        <div className='w-full pt-32 lg:mt-16 lg:pt-16 text-center mb-6'>
+          <h2 className='lg:text-3xl text-2xl lg:py-4 font-bold text-white mb-4'>Featured Content</h2>
+          <div className='grid ss:grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8'>
             {featuredBlogs.map((blog) => (
               <FeaturedBlogs key={blog.id} blog={blog} />
             ))}
           </div>
         </div>
-        <div className='grid  ss:grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-10 py-24 lg:px-4 my-2'>
+
+        <div className='w-full text-center my-6'>
+          <h2 className='text-2xl lg:text-3xl font-bold text-white py-2 mb-4'>Latest Posts</h2>
+          <div className='grid ss:grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4'>
+            {latestPosts.map((blog) => (
+              <Link key={blog.id} to={`/blog/${blog.id}`}>
+                <div className='dark:bg-slate-800 overflow-hidden rounded-xl shadow-inner hover:bg-slate-700 drop-shadow-2xl'>
+                  <img
+                    className='h-62 w-[100%] object-cover rounded-2xl m-auto p-2'
+                    src={`http://localhost:1337${blog.attributes.coverImg.data.attributes.url}`}
+                  />
+                  <div className='p-4'>
+                    <h3 className='font-bold text-xl my-l'>{blog.attributes.blogTitle}</h3>
+                    <p className='text-gray-300 text-base py-2'>{blog.attributes.blogDesc}</p>
+                  </div>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+
+        
+      </div>
+    </div>
+  )
+};
+
+export default Blogs;
+  {/*
+            blogitems.map((blog) =>
+            <Link key={blog.id} to={`/blog/${blog.id}`}>
+              <div  className='dark:bg-slate-800 overflow-hidden rounded-xl shadow-inner hover:bg-slate-700 drop-shadow-2xl'>
+                <img className='h-62 w-[100%] object-cover rounded-2xl m-auto p-2 ' src={blog.coverImg} />
+                <div className='p-4'>
+                  <h3 className='font-bold text-xl my-l'>{blog.title}</h3>
+                  <p className='text-gray-300 text-base py-2'>
+                    {blog.desc}
+                  </p>
+                </div>
+              </div>
+            </Link>
+            )
+
+          <div className='grid  ss:grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-10 py-24 lg:px-4 my-2'>
 
 
           {
@@ -62,25 +109,6 @@ const Blogs = ({ blogsData }) => {
               )
           }
 
-          {/*
-            blogitems.map((blog) =>
-            <Link key={blog.id} to={`/blog/${blog.id}`}>
-              <div  className='dark:bg-slate-800 overflow-hidden rounded-xl shadow-inner hover:bg-slate-700 drop-shadow-2xl'>
-                <img className='h-62 w-[100%] object-cover rounded-2xl m-auto p-2 ' src={blog.coverImg} />
-                <div className='p-4'>
-                  <h3 className='font-bold text-xl my-l'>{blog.title}</h3>
-                  <p className='text-gray-300 text-base py-2'>
-                    {blog.desc}
-                  </p>
-                </div>
-              </div>
-            </Link>
-            )
-        */}
+        
         </div>
-      </div>
-    </div>
-  )
-};
-
-export default Blogs;
+        */}

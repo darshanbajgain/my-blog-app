@@ -30,7 +30,7 @@ const Footer = () => {
             */}
             <div className='text-sm hover:text-white'>
               <HiGlobe size={20} className='text-gray-300 mr-2 inline' />
-              <a href='https://darshanbajgain.github.io' className='align-middle '>darshanbajgain.github.io</a>
+              <a href='https://darshanbajgain.github.io'target="_blank" rel="noopener noreferrer" className='align-middle '>darshanbajgain.github.io</a>
             </div>
           </div>
 
@@ -38,9 +38,9 @@ const Footer = () => {
           <div>
             <h2 className='text-lg font-semibold text-white mb-4'>Follow Me</h2>
             <div className='flex justify-center items-center space-x-4'>
-              <a href='https://twitter.com/thearshanbajgai' className='text-gray-300 hover:text-white' title='Twitter'><FaTwitter size={22} /></a>
-              <a href='https://www.linkedin.com/in/darshanbajgain/' className='text-gray-300 hover:text-white' title='LinkedIn'><FaLinkedin size={22} /></a>
-              <a href='https://github.com/darshanbajgai' className='text-gray-300 hover:text-white' title='GitHub'><FaGithub size={22} /></a>
+              <a href='https://twitter.com/thearshanbajgai'target="_blank" rel="noopener noreferrer" className='text-gray-300 hover:text-white' title='Twitter'><FaTwitter size={22} /></a>
+              <a href='https://www.linkedin.com/in/darshanbajgain/'target="_blank" rel="noopener noreferrer" className='text-gray-300 hover:text-white' title='LinkedIn'><FaLinkedin size={22} /></a>
+              <a href='https://github.com/darshanbajgai'target="_blank" rel="noopener noreferrer" className='text-gray-300 hover:text-white' title='GitHub'><FaGithub size={22} /></a>
             </div>
           </div>
         </div>

@@ -36,7 +36,7 @@ const AboutContent = () => {
                 <a href="https://github.com/darshanbajgai" target="_blank" rel="noopener noreferrer">
                     <FaGithub size={32} className="text-white mr-4 hover-text-slate-400" />
                 </a>
-                <a href="https://twitter.com/thearshanbajgai" target="_blank" rel="noopener noreferrer">
+                <a href="https://twitter.com/thearshanbajgain" target="_blank" rel="noopener noreferrer">
                     <FaTwitter size={32} className="text-white hover-text-slate-400" />
                 </a>
             </div>

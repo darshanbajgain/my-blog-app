@@ -30,7 +30,7 @@ const Footer = () => {
             */}
             <div className='text-sm hover:text-white'>
               <HiGlobe size={20} className='text-gray-300 mr-2 inline' />
-              <a href='#' className='align-middle '>www.example.com</a>
+              <a href='htttps://darshanbajgain.github.io' className='align-middle '>darshanbajgain.github.io</a>
             </div>
           </div>
 

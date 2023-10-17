@@ -12,6 +12,8 @@
   "dependencies": {
     "markdown-it": "^13.0.2",
     "markdown-parser-react": "^1.1.2",
+    "pg": "^8.11.3",
+    "pg-connection-string": "^2.6.2",
     "prop-type": "^0.0.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

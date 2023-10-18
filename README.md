@@ -15,4 +15,4 @@ I haven't deployed it on the web as Strapi CMS is not free for hosting. So not a
 
   # Screenshots
 
-[Home1](home1.png)
+![Home1](home1.png)

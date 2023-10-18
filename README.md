@@ -24,6 +24,8 @@ I haven't deployed it on the web as Strapi CMS is not free for hosting. So not a
 **Mobile**
 ![mobile1](mobile1.png)
 ![mobile2](mobile2.png)
+**Strapi CMS**
+![strapi](strapicontent.png)
 
 
 

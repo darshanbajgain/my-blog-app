@@ -13,4 +13,4 @@ I haven't deployed it on the web as Strapi CMS is not free for hosting. So not a
 - Fast development with Vite and React.
 - Easy to customize and extend.
 
-![alt text](https://www.canva.com/design/DAFxP-1DFYQ/oIUkM6C9V4m-QRHP6W93Bw/edit?utm_content=DAFxP-1DFYQ&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
+[screenshot](home1.png)

@@ -13,4 +13,6 @@ I haven't deployed it on the web as Strapi CMS is not free for hosting. So not a
 - Fast development with Vite and React.
 - Easy to customize and extend.
 
-[screenshot](home1.png)
+  # Screenshots
+
+[Home1](home1)

@@ -4,10 +4,7 @@ This is a dynamic blog app built using React, Vite, Tailwind CSS, and Strapi CMS
 and display blog posts in a beautiful and responsive web application. You can run this app locally and use
 it as a starting point for your blogging project.
 
-I haven't deployed it on the web as Strapi CMS is not free for hosting. But I have hosted the frontend interface (React JS and Tailwind)
-of this blog on the web, the frontend live preview link is given below:
-
-# Frontend Preview:
+I haven't deployed it on the web as Strapi CMS is not free for hosting. So not available for preview on web.
 
 # Features:
 

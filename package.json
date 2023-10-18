@@ -10,6 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@strapi/provider-upload-cloudinary": "^4.14.4",
     "markdown-it": "^13.0.2",
     "markdown-parser-react": "^1.1.2",
     "pg": "^8.11.3",

@@ -5,6 +5,8 @@ and display blog posts in a beautiful and responsive web application. You can ru
 it as a starting point for your blogging project.
 
 I haven't deployed it on the web as Strapi CMS is not free for hosting. So not available for preview on web.
+But I deployed live blog that used only frontend with same styling. THe live preview of this looks similar to this:
+https://blogdarshan.netlify.app/
 
 # Features:
 
